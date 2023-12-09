@@ -1,0 +1,58 @@
+What is Emmet?
+It is a web-development tool which allows the developers to write HTML and CSS code efficiently. Emmet is a shorthand syntax that expands to valid syntax. It is a feature provided by editors like VS Code. For example: If I want to create div containing unordered list, containing 3 list.
+Using Emmet :
+div>ul>li*3
+Which will expand to -
+<div> 
+    <ul> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+    </ul>
+</div>
+
+Difference between Library and Framework?
+Library is a collection of functions or classes that you can use in your code while Framework is complex architecture which dictates how your application should be built.
+Using Framework often refers to following a set of rules while library provides you flexibility.
+For example :
+Library is like you are given a toolbox. Each tool has its specific job, hammer for nails or screwdriver for screws. Library is like the toolbox. You can pick the tools you need and use them in your project.
+Framework is like a toy car with a kit. The kit comes with predifined parts set of instructions to build the toy car. Framework is like that kit. 
+
+What is CDN? Why do we use it?
+CDN stands for Content Delivery Network. It is a network of servers which is distributed across various location to deliver web content more efficiently.
+For example :
+You want to watch a movie on your laptop. The movie is stored far away on the server. Getting the movie directly may take some time as it has to travel a distance. 
+Now, let's say there are many copies of that movie in small servers located near your surrounding. So, CDN is like that small servers located near your surrounding.
+So, now if you want to watch the movie, instead of fetching the movie from far away server, you can you the small servers located in your surrounding. So that it does not travel a long distance.
+
+CDN is used for :
+1. Faster Content delivery
+2. Reducing Server Load
+3. Load Balancing
+4. Caching
+5. Distributed security
+6. Cost saving
+
+Why React is known as React?
+React is a JavaScript Library which is developed by Facebook. The name React comes from the core concept - "reacting to the changes in data".
+In React, the user interface is divided into components. Each component is can be thought of as a piece of user interface which reacts to changes in data. React updates and re-renders only the components which are affected by the changes rather than re-rendering the entire page.
+
+What is crossorigin in script tag?
+Imagine I want to use a cool script which is hosted on another website, not mine. Browser have rules to make sure it is safe, called as Same-Origin Policy. 
+Now, if you are using a script from another place, you need to tell the browser how to handle it. There are two ways -
+crossorigin="anonymous" : It is like saying "Hey, Go ahead and use the script but don't use any secret information(cookies)."
+crossorigin="use-credentials" : It is like saying "Alright, while using the script include the secret information(cookies)."
+
+What is the difference between React and ReactDOM?
+React is a library that enables to build components and control its behaviour and state.
+ReactDOM is a package that works with React to take that components and render then into actual HTML of the web page.
+
+What is difference between react.development.js and react.production.js files via CDN?
+react.development is used for development. The file size is large.
+react.production is used for production. The file size is small.
+
+What is async and defer?
+async and defer are the attributes of script tag. 
+async : It is used when script is independent of the other scripts and doesn't require HTML to be fully parsed. It starts downloading and will execute as soon as it is ready. 
+defer: It is used when script needs the HTML document to fully parse and want to maintain the order of execution. It starts downloading and will wait for HTML document to fully parse.
+

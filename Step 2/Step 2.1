@@ -1,0 +1,86 @@
+What is NPM?
+It do not stand for Node Package Manager but acts as a Node package manager. It is the world's largest software registry, where the developers can borrow and share packages.
+
+What is the difference between npm and npx?
+npm is used for installing and managing the packages or dependencies. We often use them for dependencies which we need throughout the program.
+npx is used for executable package which do not need global installation. Executable packages are present in ./node_modules/bin or downloads them on-fly. 
+
+What is Parcel/WebPack? Why do we need it?
+Parcel and Webpack both are popular bundlers for web application, which are responsible for bundling and optimizing the code. Bundler like parcel and web pack also plays a crucial role in managing the dependencies, including transitive dependencies. Let's understand it with an help of an example : 
+* Dependencies Resolution - Let take a robot. So, there are many things required to make the robot like head, legs, hands, etc. and let's say the legs are futher depended on wheels. So,this is a transitive dependency. So, in this process, I will make sure all the part are properly taken care of.
+* Bundling and Optimisation - Now, let us consider that I want to gift this robot to my yonger sibling. So, I will make sure to give it in a proper box rather than giving seperate parts in seperate polythenes. This is called as bundling. Now, by optimisation, I mean, I will ensure that the box is small and the space inside it is properly utilised.
+* Tree Shaking - I will remove all the unnecessary parts which are not required to make the robot. So, suppose there is a clay inside my box will is not required to make the robot so, I will remove it.
+
+We need Parcel or webPack in order to optimize the code. The parcel takes care of the following things - 
+* Create a server - Parcel has a in-built server.
+* Hot Module Replacement(HMR) - It supports HMR for fast development feedback.
+* File watcher Algorithm - It is used to detect changes and trigger rebuild. It is written in C++.
+* Bundling - It bundles all your code, including the dependencies.
+* Minify - It can minify your code for production build.
+* Compression - There are many assets like images which are compressed by Parcel.
+* Cleaning our code - It automatically cleans up the output directory during the builds.
+* Dev and production build - It is used by both production and development build. 
+* super fast - It is very fast.
+* Caching - It uses caching to speed up the build by avoiding the unnecessary work.
+* consistent Hashing Algorithm - Parcel uses this for cache invalidation.
+* Compatible with older version 
+* Https on devDependencies 
+* port number
+* zero configuration
+
+What is .parcel-cache?
+It is a folder which stores the cache data, in order to speed up the build process in the subsequent builds. 
+NOTE: We should put .parcel-cache in .gitignore. 
+
+What is difference between 'dependencies' vs 'devDependencies'
+dependencies are essential for running the application in production environment.
+dev-dependencies are used for development and testing. 
+
+What is Tree Shaking?
+It is a technique used by module bunders to remove the unwanted files from the final bundle. 
+
+What is Hot Module Replacement?
+Hot Module Replacement(HMR), it allows the developers to update modules without full page reload. 
+
+List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
+1. Create Server 
+2. Hot Module Replacement
+3. Minification 
+4. Caching 
+5. Compatible with old browser 
+6. Compression
+
+What is .gitignore? What should we add and not add into it?
+It is a configuration file which we use to intentionally untrack files, so that git can igore that files. 
+WHAT TO ADD IN .gitignore :
+node_modules
+.env
+.parcel-cache
+WHAT NOT TO ADD IN .gitignore :
+package.json
+package-lock.json
+
+What is the difference between package.json and package-lock.json
+package.json store the version in ^(caret) and ~(tilde) form, meaning the version can be updated as the packages or dependencies is updated.
+package-lock.json stores the exact version of the package and dependencies we are using to make the project.
+
+Why should I not modify package-lock.json?
+
+
+What is node_modules ? Is it a good idea to push that on git?
+node_modules is a set of packages or dependencies which are required.
+No, it is not at all a good idea to push node_modules on git because it is very heavy and can be created on the server-side.
+
+What is the dist folder?
+
+
+What is browserlists
+It is the set of list of browser on which our code can run.
+
+Read about dif bundlers: vite, webpack, parcel
+
+
+Read about: ^ - caret and ~ - tilda
+
+
+Read about Script types in html (MDN Docs)

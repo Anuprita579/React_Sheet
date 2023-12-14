@@ -1,0 +1,47 @@
+.headerbar {
+  background-color: navy;
+  padding: 5px;
+  display: flex;
+}
+
+.header-left {
+  color: #f8f8ff;
+  background-color: navy;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  display: flex;
+}
+
+.header-left h1 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.search {
+  background-color: navy;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  display: flex;
+}
+
+.search input {
+  border-radius: 20px;
+  outline: none;
+  width: 70%;
+  height: 40px;
+  padding-left: 20px;
+  font-family: Lucida Sans, Lucida Sans Regular, Lucida Grande, Lucida Sans Unicode, Geneva, Verdana, sans-serif;
+}
+
+.header-right {
+  color: #f8f8ff;
+  background-color: navy;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  display: flex;
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */

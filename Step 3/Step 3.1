@@ -1,0 +1,66 @@
+QUESTIONS :
+
+What is JSX?
+Most of the people says JSX stands for JavaScript XML, but again there is no mention of full form of JSX in the official documentation by Meta or Facebook. It has a syntax similar to HTML.
+
+Superpowers of JSX?
+Using JSX -
+* increases readability
+* shortens the code
+* secure
+
+Difference between HTML and JSX?
+* In HTML, we use class but in JSX we use className.
+* In HTML, there are string pairs (font-size) but in JSX we use CamelCase (fontSize).
+
+Role of type attribute in script tag? What options can I use there?
+The type attribute is used to represent the MIME(Multipurpose Internet Mail Extensions) type of script content.  
+There are 4 types -
+* type = text/javascript : It is the default MIME type for JavaScript.
+* type = module : It is used when we are using JavaScript modules. Modules are the way to organize code into reusable and maintainable units.  
+* type = application/json : It is used when we have to write JSON code in JavaScript. 
+
+
+{TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+{TitleComponent} it is used for React Element.
+{<TitleComponent />} it is used to return the function component. We can also write this as {TitleComponent()}
+{<TitleComponent></TitleComponent>} it is the same way of writing {<TitleComponent />}.
+
+NOTES :
+----------------------------
+React.createElement vs JSX
+----------------------------
+React.createElement => Object => HTML/DOM
+JSX => React.createElement => Object => HTML/DOM
+
+--------------------------
+Behind the Scenes of JSX
+--------------------------
+Babel is used for converting the JSX code to React or JavaScript code.
+
+----------------
+Benefits of JSX
+----------------
+JSX also provides security preventing cross-site scripting(XSS). 
+Cross-Site Scripting (XSS) : In this the attacker injects malicious scripts into web content that is delivered to users.
+Hence, Sanitization is done.
+Sanitization : It is the process of cleaning and filtering the data to ensure that the data is free from malicious content.
+
+---------------------------
+Babel & parcel role in JSX
+---------------------------
+Parcel contains Babel. When we install parcel, it automatically downloads Babel with itself.
+
+-----------
+Components
+-----------
+There are two types of Components in React - 
+* Functional Component (New)
+* Class Component (Old)
+
+What is Component Composition or Composing Components?
+The nesting of the components is called as Component Composition or Composing Components.
+
+
+Reconcillation
+Diff Algorithm

@@ -1,0 +1,111 @@
+Is JSX mandatory for React?
+No, JSX is not mandatory for React. We can also use React.createElement
+
+Is ES6 mandatory for React?
+No, even ES6 is not mandatory for React. 
+
+How can I write comments in JSX?
+There are 3 ways you can write comments in JS. Using // or /* */ or /* **** */.
+
+What is <React.Fragment></React.Fragment> and <></> ?
+React.Fragment is used to create a wrapper or a container for multiple elements without adding extra DOM node.
+So, the React element can have only one parent. 
+For example : 
+const AppLayout = () = {
+    return(
+        <Header />
+        <Body />
+        <Footer />
+    );
+}
+This may not work as said React element can have only one parent. In order to save this error we can write div.
+const AppLayout = () = {
+    return(
+        <div>
+            <Header />
+            <Body />
+            <Footer />
+        </div>
+    );
+}
+But, if I don't want a extra div, then I can use <React.Fragment> or simply <>
+const AppLayout = () = {
+    return(
+        <React.Fragment>
+            <Header />
+            <Body />
+            <Footer />
+        </React.Fragment>
+    );
+}
+OR 
+const AppLayout = () = {
+    return(
+        <>
+            <Header />
+            <Body />
+            <Footer />
+        </>
+    );
+}
+
+
+Can I use React.Fragment inside another React.Fragment?
+Yes, we can use React.Fragment inside another React.Fragment. 
+
+
+What is Virtual DOM?
+Virtual DOM is the representation of the DOM.
+
+
+What is Reconciliation in React?
+Reconciliation in React is like a smart update system. It figures out what changes are made to the code by comparing the DOM and virtual DOM using Diff algorithm and re-renders only the changes or updates made to the code.
+
+
+What is React Fiber?
+It is a smart engine used to make user interface. It has the following features - 
+* Incremental Rendering : It splits its work into small small tasks. 
+For example : In youtube, instead of loading 1000 of videos, it renders only few videos for the first frame, increaing the user experience.
+* Pause and resume the work : So, for the same youtube example. Once the first frame is done it will take a break and once the user scrolls down it will again resume the work for next frame. 
+* Priority : React knows to prioritize its work. Suppose there is animation used, it will give less priority to it.
+* Reuse : It reuses the components.
+
+
+Why we need keys in React? When do we need keys in React?
+So, when there are similar tags in the React and I add a new tag which is already present, React will get confused and re-render all the similar tags. 
+For exapmle : 
+I have 3 divs in body tag and I have introduced one more div tag inside the body; the React will get confuse and re-render all the div. 
+But, if I use a "id", the React can diffrentiate using Diff Algorithm and re-render only the updated or new div.
+NOTE : Avoid using index as the key. 
+
+Can we use index as keys in React?
+Yes, we can use index as key in React. But, we should avoid using keys in React.
+For example : Consider a To-do-List
+- Consider there are 3 tasks A(index 0), B(index 1) and C(index 2). Now, I want to add new task, say D. 
+- NOTE : D can be added at start as well as end. In this example let's add it at the end.
+- So, now the tasks will look like A(index 0), B(index 1), C(index 2) and D(index 3). //Due to Reconciliation only D is changed.
+- Now, let's say I want to delete the task C. Now the list will look like A(index 0), B(index 1) and D(index 2).
+- And, now if I want to delete D. React might get confused as due to Reconciliation, it might think D is at index 3, but index 3 is empty. This might lead to confusion.
+- Hence, index should be avoided as using key.
+
+
+What is props in React? 
+props are nothing but properties in React.  
+
+What is a Config Driven UI ?
+So, I will not a build a different website for different data; rather I would built a website which changes according to the data recieved. This is called as Config driven UI.
+
+
+What is optional chaining?
+It is a concept in Javascript to deal with the nested objects existence. It helps us to avoid errors such as Type error: cannot read the property of x undefined or Type error: cannot read the property of x null.
+For example : 
+const person = {
+    name: "John Doe",
+    address: {
+        city: "",
+    }
+}
+const withoutOC = person && person.address && person.address.city;
+const withOC = person?.address?.city;
+console.log("without optional chaining : " + withoutOC); //undefined
+console.log("with optional chaining : " + withOC); //undefined

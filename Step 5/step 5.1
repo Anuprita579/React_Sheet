@@ -1,0 +1,36 @@
+what is e.target.value?
+
+What is the difference between Named Export, Default export and * as export?
+In Named Export:
+//In module file( for example: Component.js)
+export const function1 = () => {/* ..... */}
+export const function2 = () => {/* ..... */}
+//In main javascript file
+import {function1, function2 } from "./Component"
+
+In Default Export:
+//In module file( For example: ComponentName.js)
+const ComponentName = () => {/* ..... */} export default ComponentName;
+//In main javascript file
+import ComponentName from "./ComponentName"
+
+In * as Export:
+//In module file( for example: Component.js)
+export const function1 = () => {/* ..... */}
+export const function2 = () => {/* ..... */}
+//In main javascript file
+import * as myModule from "./Component"
+
+
+What is the importance of config.js file?
+In congig.js we store data like API key, databaseConnection string, which we can also skip from pushing on GIT.
+
+What is state in React?
+In React, State is a special property which keep a watch at the data that changes overtime. We know that, the Virtual DOM undergoes reconciliation using Diff algorithm but in that it is not able to keep a track of the data which is changed.
+So, using State, we can keep a track of the data which is changed and re-render only that part of the data.
+
+What are React Hooks?
+React hooks are nothing but functions which is used to define the state in React and also can access to React features without writing the class component.
+
+Why do we need a useState Hook?
+useState is a Hook or a function which is used to define the state in React. So, we use it because it reduces a lot of class component code or boiler plate code.  
